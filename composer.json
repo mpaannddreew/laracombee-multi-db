@@ -1,0 +1,30 @@
+{
+    "name": "fannypack/laracombee-multi-db",
+    "description": "A Recombee with multiple databases integration for Laravel",
+    "type": "library",
+    "require": {
+        "amranidev/laracombee": "^0.1.37"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mpande Andrew",
+            "email": "andrewmvp007@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "FannyPack\\LaracombeeMultiDB\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FannyPack\\LaracombeeMultiDB\\LaracombeeMultiDBServiceProvider"
+            ],
+            "aliases": {
+                "MultiDB": "FannyPack\\LaracombeeMultiDB\\MultiDBFacade"
+            }
+        }
+    }
+}
