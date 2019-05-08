@@ -9,10 +9,15 @@
 namespace FannyPack\LaracombeeMultiDB;
 
 
+use GuzzleHttp\Promise\Promise;
 use Amranidev\Laracombee\AbstractRecombee;
 use Recombee\RecommApi\Exceptions\ApiTimeoutException;
 use Recombee\RecommApi\Exceptions\ResponseException;
 use Recombee\RecommApi\Exceptions\ApiException;
+use Recombee\RecommApi\Requests\Request;
+use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Foundation\Auth\User;
+use Illuminate\Database\Eloquent\Model;
 
 class Laracombee extends AbstractRecombee
 {

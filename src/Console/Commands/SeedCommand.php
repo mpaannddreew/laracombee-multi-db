@@ -4,6 +4,7 @@ namespace FannyPack\LaracombeeMultiDB\Console\Commands;
 
 
 use FannyPack\LaracombeeMultiDB\Console\LaracombeeCommand;
+use FannyPack\LaracombeeMultiDB\MultiDBFacade;
 
 class SeedCommand extends LaracombeeCommand
 {

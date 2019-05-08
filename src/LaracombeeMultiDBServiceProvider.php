@@ -29,6 +29,14 @@ class LaracombeeMultiDBServiceProvider extends ServiceProvider
         $this->app->singleton('laracombee-multi-db', function () {
             return new DatabaseManager($this->app);
         });
+
+        collect($this->app['config']['laracombee-multi-db.databases'])->reject('default')->each(function ($value, $key) {
+            MultiDBFacade::extend($key, function ($config) {
+                return new Laracombee(
+                    $config["database"], $config["token"], $config["protocol"], $config["timeout"]
+                );
+            });
+        });
     }
 
     /**
